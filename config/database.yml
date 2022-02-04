@@ -24,7 +24,6 @@ default: &default
   username: <%= ENV['DATABASE_USER'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
-
 development:
   <<: *default
   database: book_collection_development
