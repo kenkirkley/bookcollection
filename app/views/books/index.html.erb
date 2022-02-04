@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+      <th>Author</th>
+      <th colspan="3"></th>
+      <th>Price</th>
+      <th colspan="3">Published_date</th>
+      <th colspan="3"></th>
+
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td colspan="3"><%= book.title %></td>
+        <td colspan="3"><%= book.author %></td>
+        <td colspan="3"><%= book.price %></td>
+        <td colspan="3"><%= book.published_date %></td>
+        <td colspan="3"><%= link_to 'Show', book %></td>
+        <td colspan="3"><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td colspan="3"><%= link_to 'Delete', delete_book_path(book) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book', new_book_path %>
